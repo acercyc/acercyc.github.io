@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acer's first page</title>
+    <style>
+      /* CSS controls how the page looks. */
+      body {
+        margin: 0;
+        padding: 48px 24px;
+        background: #f4f7fb;
+        color: #203047;
+        font-family: system-ui, sans-serif;
+        line-height: 1.6;
+      }
+      main {
+        max-width: 600px;
+        margin: 8vh auto;
+        padding: 32px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 12px 40px #2030470d;
+      }
+      h1 { line-height: 1.2; }
+      button {
+        padding: 12px 20px;
+        border: 0;
+        border-radius: 8px;
+        background: #2357c6;
+        color: white;
+        font: inherit;
+        cursor: pointer;
+      }
+      button:hover { background: #19449f; }
+      button:focus-visible { outline: 3px solid #203047; outline-offset: 4px; }
+      #message { min-height: 3.2em; }
+      footer { color: #59677a; font-size: 0.9rem; }
+    </style>
+  </head>
+  <body>
+    <!-- HTML describes the content of the page. -->
+    <main>
+      <p>MY FIRST WEBSITE</p>
+      <h1>Hello, I'm Acer.</h1>
+      <p>This is a little test page for my personal website. More about my research and projects will come later.</p>
+      <button id="hello-button" type="button">Say hello</button>
+      <p id="message" role="status">Try the button above.</p>
+      <footer>Made with HTML, CSS, and a little JavaScript.</footer>
+    </main>
+    <script>
+      // JavaScript makes the button respond to a click.
+      document.querySelector('#hello-button').addEventListener('click', () => {
+        document.querySelector('#message').textContent = 'Hello! Your first interactive page is working.';
+      });
+    </script>
+  </body>
+</html>
